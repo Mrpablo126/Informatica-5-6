@@ -1,2 +1,5 @@
-emoji=input("select an emoji :) or :(")
+emoji=input("select an emoji :😊 or 😔\n")
+emoji=emoji.replace(":)","😊")
+emoji=emoji.replace(":(","😔")
+emoji=emoji.replace(":","Adriana salte 🗣️")
 print(emoji)

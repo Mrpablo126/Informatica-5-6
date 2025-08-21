@@ -1,18 +1,15 @@
-print("Welcome")
-print("Enter the password to continue")
-password = ("Tilin")
-a = input("")
-print("password:", a)
+import getpass
 
-if a == password: 
-    print("\n")
-    print("\n")
-    print("\n")
-    print("\n")
-    print("\n")
-    print("\n")
-    print("\n")
-    print("The password is correct")
+def main():
+    password = getpass.getpass("Set password:")
+    input("Press enter to log in.")
+    check_password(password)
 
-if a != password:
-    print("Terrible noob")
+def check_password(p):
+
+    guess = input("Enter password:")
+    if p == guess:
+        print("correct password")
+    print("The program has ended.")
+
+main()

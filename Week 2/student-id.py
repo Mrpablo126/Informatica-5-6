@@ -12,4 +12,4 @@ clas = input("Choose your class:")
 
 line = "-" * 40
 print(line)
-print(last.upper), print(name.title)
+print(last.upper()), print(name.title())

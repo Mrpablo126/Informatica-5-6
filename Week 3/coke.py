@@ -1,16 +1,22 @@
-name = input("Insert your name:")
+def main():
+    price = 50
+    total_paid = 0
+    vending_machine(price, total_paid)
 
-coin = int(input("Insert money:"))
-coca = 50
-cambio = coin - coca
 
-while coin == coca:
-    print("Take your product")
-    
-    if coin < coca:
-        print("Error")
-    elif coin > coca:
-            print(cambio)
-    else:
-            print("Error")
-            break
+def vending_machine(price, total_paid):
+    while price > 0:
+        print(f"Amount due: {price}")
+        pay = int(input("Insert coin:"))
+
+        if pay == 25 or pay == 10 or pay == 5:
+            price = price - pay
+            total_paid = total_paid + pay
+        
+        else:
+            print("Not a coin.")
+
+    if total_paid >= price:
+        print("Thanks!  Here's your Coke 😎😎😎😎😎😎")
+        print(f"Here's your change: {total_paid - 50}")
+main()

@@ -33,7 +33,13 @@ input_string = input("Please type a message:")
 #     i += 1
 
 #Example 2
-i = -1
-while i < len(input_string):
-    print(input_string[i])
-    i -= 1
+# i = -1
+# while i < len(input_string):
+#     print(input_string[i])
+#     i -= 1
+
+#Example 3
+
+print("h" in input_string)
+print("j" in input_string)
+print("ello" in input_string)

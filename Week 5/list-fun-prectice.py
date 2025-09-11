@@ -1,20 +1,18 @@
-   
-def lenght():
-    list1 = []
-    values = int(input("Select a value:"))
-    adds = int(input("Select an add:"))
+def main():  
+    values()
+
+def values():
+    value_list = []
+    while True:
+        value = int(input("Select a value:"))
+        if (value != 0):
+            value_list.append(value)
+            print(value_list)    
+            continue
+        else:
+            break
     
-    list2_mean = []
-
-def range_of_list():
-    range = min(list)
-
-def values_and_adds(values, adds):
-    values_adds = values, adds
-
-    while values_adds < 0:
-        break
         
-    if values_adds > 0:
-        print(values, adds)
-        return values_and_adds
+
+
+main()

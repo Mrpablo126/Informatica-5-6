@@ -7,9 +7,9 @@ weekly_playlist = [
         "Good 4 u"
     ]
 weekly_playlist.append(' "Drivers License"')
-weekly_playlist.insert(0,'Bohemian Rhapsody')
-weekly_playlist.remove('Good 4 u')
-weekly_playlist.index('Levitating')
+weekly_playlist.insert(0,"Bohemian Rhapsody")
+weekly_playlist.remove("Good 4 u")
+weekly_playlist.index("Levitating")
 
 
 

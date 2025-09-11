@@ -7,7 +7,9 @@ def values():
         value = int(input("Select a value:"))
         if (value != 0):
             value_list.append(value)
-            print(value_list)    
+            print(value_list) 
+            ordered_list = sorted(value_list)
+            print(ordered_list)
             continue
         else:
             break

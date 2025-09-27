@@ -4,12 +4,8 @@ birthdays = {
    "Luna": "22/01/2008"
 }
 print("1-Jose\n""2-Noemi\n""3-Luna")
-name = input(print("Select a number:")).title
-
-while True:
-    if name is not birthdays:
-        print("This name is not on the list")
-        break
-    
-    if name in birthdays:
-        print(f"{name} ")
+name = input("Enter a name:").title()
+if name in birthdays:
+   print(f"The birthday of",name, "is:",birthdays[name])
+else:
+   print("This name is not in the list")

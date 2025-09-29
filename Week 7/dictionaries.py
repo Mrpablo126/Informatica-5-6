@@ -22,11 +22,11 @@ capitals.clear()
 #     s = Houses[student]
 #     print(f"{student}: {s}")
 
-# students =[
-#     {"name": "Hermione", "house": "Gryffindor", "patronus": "Otter"},
-#     {"name": "Harry", "house": "Gryffindor", "patronus": "Stag"},
-#     {"name": "Ron", "house": "Gryffindor", "patronus": "Jack Russell terrier"},
-#     {"name": "Draco", "house": "Slytherin", "patronus": None}
-# ]
-# for element in students:
-#     print(f" {element["name"]}, {element["house"]}, {element["patronus"]}")
+students =[
+     {"name": "Hermione", "house": "Gryffindor", "patronus": "Otter"},
+     {"name": "Harry", "house": "Gryffindor", "patronus": "Stag"},
+     {"name": "Ron", "house": "Gryffindor", "patronus": "Jack Russell terrier"},
+     {"name": "Draco", "house": "Slytherin", "patronus": None}
+ ]
+for element in students:
+    print(f" {element["name"]}, {element["house"]}, {element["patronus"]}")

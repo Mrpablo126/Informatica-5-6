@@ -12,7 +12,7 @@ while i < 13:
     i += 1
 print(user_letters)     
 
-word = input("Enter a word with these letters:")
+word = input("Enter a word with these letters:").lower()
 o = 0
 while o < len(word):
     if word.lower()[o] in user_letters:
@@ -30,3 +30,10 @@ for line in lines:
 if word in dictwords:
     print("It's ok")
 else:print("Not ok")
+
+score = 0
+while score == len(word):
+    if word.value() in alphabet:
+        
+        score += 1
+print(len(.value()))

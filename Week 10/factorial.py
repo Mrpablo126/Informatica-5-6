@@ -1,12 +1,16 @@
 def main():
-    a = int(input("Select a positive integer:"))
-  
-    while a == 1:
+    x = int(input("Type a positive integer:"))
+    factorial(x)
+
+def factorial(x):
+    f = 0
+    i = x
+    while f < i:
         list = []
-        list.append(a)
-        a -= 1
-        
-print(list)
+        list.append(f)
+        print(list)
+    
+        f += 1
+    b = range(len(list))
+    
 main()
-
-

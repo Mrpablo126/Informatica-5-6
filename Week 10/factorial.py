@@ -1,16 +1,9 @@
 def main():
-    x = int(input("Type a positive integer:"))
-    factorial(x)
+    print("Type a positive integer:")
+    x = int(input())
+    fact = 1
+    for i in range(1, x + 1):
+        fact *= i
+    print("The factorial of", x ,"is: ", fact)
 
-def factorial(x):
-    f = 0
-    i = x
-    while f < i:
-        list = []
-        list.append(f)
-        print(list)
-    
-        f += 1
-    b = range(len(list))
-    
 main()

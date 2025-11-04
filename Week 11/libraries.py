@@ -23,7 +23,7 @@
 import sys
 import cowsay
 try:
-    cowsay.cow("Hello, ", sys.argv[1])
+    cowsay.cow("Hello,", sys.argv[1])
 except IndexError:
     # print("Too few arguments")
     sys.exit()

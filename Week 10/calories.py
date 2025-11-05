@@ -10,8 +10,8 @@ food = {{"almond milk": 30, "skim": 45},
     {"ranch": 73, "ranch, fat free": 17}}
 print(food)
 print("Select two foods:")
+
 a = input("First food:").lower()
 b = input("Second food:").lower()
-for calories in food:
-    c = a[1] + b[1]
-    print(f"The total of calories is:{calories}: {c}")
+c = a[1] + b[1]
+print(f"The total of calories is:{c}")

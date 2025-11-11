@@ -1,8 +1,5 @@
 import requests
 import json
-
-
-
 universities_list = {
 "Tecmilenio": {
 "majors": 24,
@@ -16,14 +13,14 @@ universities_list = {
 "closest_campus": "Ciudad Juarez",
 "distance_km": 280,
 },
-"upn": {
+"UPN": {
 "majors": 64,
 "average_semester_cost": 0,
 "closest_campus": "Chihuahua",
 "distance_km": 326,
 
 },
-"urn": {
+"URN": {
 "majors": 29,
 "average_semester_cost": 10000,
 "closest_campus": "Juarez",
@@ -54,3 +51,36 @@ universities_list = {
 "distance_km": 27,
 },
 }
+print("1-Local search \n2-Web site search")
+search = int(input("Select the type of information:"))
+print("1-Tecmilenio\n2-UACJ\n3-UPN\n4-URN\n5-Tec de Monterrey\n6-BYU_Pathway\n7-EAC\n8-tec_casas_grandes")
+while True:
+    if search == 1:
+        x = int(input("What university do you want:"))
+        if x == 1:
+            print(universities_list["Tecmilenio"])
+        elif x == 2:
+            print(universities_list["UACJ"])
+        elif x == 3:
+            print(universities_list["UPN"])
+        elif x == 4:
+            print(universities_list["URN"])
+        elif x == 5:
+            print(universities_list["Tec de Monterrey"])
+        elif x == 6:
+            print(universities_list["BYU_Pathway"])
+        elif x == 7:
+            print(universities_list["EAC"])
+        elif x == 8:
+            print(universities_list["tec_casas_grandes"])
+
+    if search == 2:
+        print("1-Tecmilenio\n2-UACJ\n3-UPN\n4-URN\n5-Tec de Monterrey\n6-BYU_Pathway\n7-EAC\n8-tec_casas_grandes")
+        link = "https://raw.githubusercontent.com/Hipo/university-domains-list/refs/heads/master/world_universities_and_domains.json"
+        response = requests.get(link)
+        data = response.json()
+        uni_name = input("Enter the name of the university you want to search for: ")
+        for university in data:
+            if uni_name.lower() in university['name']:
+                print(json.dumps(university, indent=2))
+            

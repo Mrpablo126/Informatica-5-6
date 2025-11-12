@@ -8,8 +8,8 @@ response = requests.get("https://itunes.apple.com/search?entity=song&limit=1&ter
 
 search = response.json()
 for result in search["results"]:
-    print(result["trackName"],result["artistname"])
+    print(f"{result['artistName']}\n{result['trackName']}")
 
-city = input("City:")
-response2 = requests.get("http://goweather.xyz/weather/"+city)
-print(response2.json())
+# city = input("City:")
+# response2 = requests.get("http://goweather.xyz/weather/"+city)
+# print(response2.json())

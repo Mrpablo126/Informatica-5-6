@@ -53,34 +53,44 @@ universities_list = {
 }
 print("1-Local search \n2-Web site search")
 search = int(input("Select the type of information:"))
-print("1-Tecmilenio\n2-UACJ\n3-UPN\n4-URN\n5-Tec de Monterrey\n6-BYU_Pathway\n7-EAC\n8-tec_casas_grandes")
-while True:
-    if search == 1:
-        x = int(input("What university do you want:"))
-        if x == 1:
-            print(universities_list["Tecmilenio"])
-        elif x == 2:
-            print(universities_list["UACJ"])
-        elif x == 3:
-            print(universities_list["UPN"])
-        elif x == 4:
-            print(universities_list["URN"])
-        elif x == 5:
-            print(universities_list["Tec de Monterrey"])
-        elif x == 6:
-            print(universities_list["BYU_Pathway"])
-        elif x == 7:
-            print(universities_list["EAC"])
-        elif x == 8:
-            print(universities_list["tec_casas_grandes"])
-
-    if search == 2:
-        print("1-Tecmilenio\n2-UACJ\n3-UPN\n4-URN\n5-Tec de Monterrey\n6-BYU_Pathway\n7-EAC\n8-tec_casas_grandes")
+while search == 1:
+    print("1-Tecmilenio\n2-UACJ\n3-UPN\n4-URN\n5-Tec de Monterrey\n6-BYU_Pathway\n7-EAC\n8-tec_casas_grandes")
+    x = int(input("What university do you want:"))
+    if x == 1:
+        print(universities_list["Tecmilenio"])
+        break
+    elif x == 2:
+        print(universities_list["UACJ"])
+        break
+    elif x == 3:
+        print(universities_list["UPN"])
+        break
+    elif x == 4:
+        print(universities_list["URN"])
+        break
+    elif x == 5:
+        print(universities_list["Tec de Monterrey"])
+        break
+    elif x == 6:
+        print(universities_list["BYU_Pathway"])
+        break
+    elif x == 7:
+         print(universities_list["EAC"])
+         break
+    elif x == 8:
+        print(universities_list["tec_casas_grandes"])
+        break
+while search == 2:
+        # print("1-Tecmilenio\n2-UACJ\n3-UPN\n4-URN\n5-Tec de Monterrey\n6-BYU_Pathway\n7-EAC\n8-tec_casas_grandes")
+        u = input("Enter the name of the university you want:")
         link = "https://raw.githubusercontent.com/Hipo/university-domains-list/refs/heads/master/world_universities_and_domains.json"
         response = requests.get(link)
         data = response.json()
-        uni_name = input("Enter the name of the university you want to search for: ")
+        
         for university in data:
-            if uni_name.lower() in university['name']:
+            if u.lower() in university['name']:
                 print(json.dumps(university, indent=2))
-            
+                
+        break
+
+                    
